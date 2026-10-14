@@ -39,8 +39,11 @@ export const MAINTENANCE_PLANS = [
 
 export const UPDATE_KINDS = [
   "avance",
-  "hito",
+  "maquetado",
   "reunion",
+  "desarrollo",
+  "entrega",
+  "pago",
   "mantenimiento",
   "nota",
 ] as const;
@@ -48,9 +51,12 @@ export type UpdateKind = (typeof UPDATE_KINDS)[number];
 
 export const UPDATE_LABEL: Record<UpdateKind, string> = {
   avance: "Avance",
-  hito: "Hito",
+  maquetado: "Maquetado",
   reunion: "Reunión / cambio",
   mantenimiento: "Mantenimiento",
+  desarrollo: "Desarrollo",
+  entrega: "Entrega",
+  pago: "Pago",
   nota: "Nota",
 };
 

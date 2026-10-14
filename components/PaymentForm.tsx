@@ -23,11 +23,21 @@ export default function PaymentForm({
       <div className="row">
         <label>
           Monto (COP) *
-          <input name="amount" type="number" min={1} step={1000} required defaultValue={suggestedAmount || undefined} />
+          <input
+            name="amount"
+            type="number"
+            min={1000}
+            step={1000}
+            required
+            defaultValue={suggestedAmount || undefined}
+          />
         </label>
         <label>
           Tipo
-          <select name="type" defaultValue={isFirst ? PAYMENT_TYPES[0] : PAYMENT_TYPES[1]}>
+          <select
+            name="type"
+            defaultValue={isFirst ? PAYMENT_TYPES[0] : PAYMENT_TYPES[1]}
+          >
             {PAYMENT_TYPES.map((t) => (
               <option key={t} value={t}>
                 {t}
@@ -48,14 +58,23 @@ export default function PaymentForm({
       </div>
       <label>
         Factura en PDF *
-        <input name="invoice" type="file" accept="application/pdf,.pdf" required />
-        <span className="hint">Obligatoria para registrar el pago. Máx. 10 MB.</span>
+        <input
+          name="invoice"
+          type="file"
+          accept="application/pdf,.pdf"
+          required
+        />
+        <span className="hint">
+          Obligatoria para registrar el pago. Máx. 10 MB.
+        </span>
       </label>
       <label>
         Nota
         <input name="note" placeholder="Nequi, transferencia Bancolombia…" />
       </label>
-      <p className="hint">Los pagos de tipo «Mantenimiento» no descuentan del precio del proyecto.</p>
+      <p className="hint">
+        Los pagos de tipo «Mantenimiento» no descuentan del precio del proyecto.
+      </p>
     </ActionForm>
   );
 }
