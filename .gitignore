@@ -1,0 +1,7 @@
+node_modules
+.next
+next-env.d.ts
+*.tsbuildinfo
+# datos reales: clientes, pagos, fotos y facturas
+data/db.json
+data/uploads
